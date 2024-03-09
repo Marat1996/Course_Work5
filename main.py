@@ -1,4 +1,17 @@
 from classes.db_manager import DBManager
+from utils.utils import create_database, create_table, insert_data_into_tables
+
+
+def main():
+    db_name = "course_work5"
+    create_database(db_name)
+    print(f"База данных {db_name} создана успешно.")
+    create_table(db_name)
+    print("Таблицы созданы успешно.")
+    insert_data_into_tables(db_name)
+    print("Данные успешно добавлены в таблицы.")
+
+    user_interaction(db_name)
 
 
 def user_interaction():
