@@ -41,8 +41,9 @@ def user_interaction():
     elif user_input == "3":
         avg_salary = DBManager("course_work5").get_avg_salary()
         print("Средняя зарплата по вакансиям:")
-        for vacancy, avg_salary_from, avg_salary_to in avg_salary:
-            print(f"{vacancy}: от {avg_salary_from} до {avg_salary_to}")
+        for row in avg_salary:
+            avg_salary_from = row[0]
+            print(f"Средняя зарплата от: {avg_salary_from}")
     elif user_input == "4":
         high_salary = DBManager("course_work5").get_vacancies_with_higher_salary()
         print("Список вакансий с зарплатой выше средней:")
