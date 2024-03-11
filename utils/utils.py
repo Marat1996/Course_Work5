@@ -52,8 +52,8 @@ def insert_data_into_tables(db_name):
                                           vacancy["url"], vacancy["area"], vacancy["employer"]))
     conn.close()
 
-# print("Создание базы данных...")
-# create_database("course_work5")
-# print("База данных создана успешно.")
-# create_table("course_work5")
-# insert_data_into_tables("course_work5")
+print("Создание базы данных...")
+create_database("course_work5")
+print("База данных создана успешно.")
+create_table("course_work5")
+insert_data_into_tables("course_work5")
